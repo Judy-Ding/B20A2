@@ -1,97 +1,35 @@
-*   {
-    margin: 0;
-    padding: 0;
-    }
+@import url(index.css);
 
-    body {
-        font-family: Arial;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-    }
+.news-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
 
-    /*nav section, keep it consistant across diff pages*/
-    nav ul {
-        list-style: none;
-        padding: 0;
-        background-color: #003366; 
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-    
-    nav ul li {
-        margin: 10px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 15px 20px;
-        font-size: 18px;
-        display: block;
-    }
-    
-    nav ul li a:hover {
-        background-color: #002244; 
-        border-radius: 5px;
-    }
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    /*header section, keep it consistant across diff pages*/
-    header {
-        background-image: url('uoft.jpeg'); 
-        background-size: cover;
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
-        background-position: center;
-    }
-    
-    header h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
+.news-header {
+    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-
-    
-    .news-container {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 0;
-    }
-
-    .news-grid {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 15px;
-        width: 80%;
-        max-width: 900px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .news-header {
-        font-weight: bold;
-        background-color: #003366;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .news-item {
-        padding: 10px;
-        background-color: #f4f4f4;
-        border-radius: 5px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        margin-top: 30px;
-    }
+.news-item {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}

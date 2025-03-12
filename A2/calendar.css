@@ -1,72 +1,8 @@
-*   {
-    margin: 0;
-    padding: 0;
-    }
-
-    body {
-        font-family: Arial;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-    }
-
-    /*nav section, keep it consistant across diff pages*/
-    nav ul {
-        list-style: none;
-        padding: 0;
-        background-color: #003366; 
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
+@import url(index.css);
     
-    nav ul li {
-        margin: 10px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 15px 20px;
-        font-size: 18px;
-        display: block;
-    }
-    
-    nav ul li a:hover {
-        background-color: #002244; 
-        border-radius: 5px;
-    }
-
-    /*header section, keep it consistant across diff pages*/
-    header {
-        background-image: url('uoft.jpeg'); 
-        background-size: cover;
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
-        background-position: center;
-    }
-    
-    header h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-
-
-    
-    .calendar-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 0;
-    }
-
-
-
-    footer {
-        text-align: center;
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        margin-top: 30px;
-    }
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
