@@ -47,7 +47,7 @@ header {
 }
 
 header h1 {
-  font-size: 48px;
+  font-size: 2em;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -133,23 +133,59 @@ header p {
 
 
 /* Footer */
-footer {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top:1em;
-  padding-bottom:1em;
-  background-color: white;
-  color: black;
-  width: 100%;
-  bottom: 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  
-  img {
-    width:12em;
-    height:auto;
+
+/* smaller screens */
+@media (max-width: 800px) {
+  footer {
+    width: 100%;
+    color: black;
+    text-align: center;
+    background-color: white;
+    max-width: 100vw;
+
   }
 
+  .footer-text {
+    margin-bottom: 10px; 
+  }
+
+  .footer-image img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the image */
+  }
+}
+
+/* larger screens */
+@media (min-width: 800px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 100vw;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-text {
+    flex: 1; /* Allow text to take available space */
+    text-align: left;
+  }
+
+  .footer-image {
+    display: flex;
+    justify-content: flex-end; /* Push image to the right */
+    align-items: center; /* Vertically center */
+    flex: 0 0 auto; /* Prevent image from shrinking */
+  }
+
+  .footer-image img {
+    max-width: 8em; /* Set max image width */
+    height: auto;
+  }
 }
 
 
