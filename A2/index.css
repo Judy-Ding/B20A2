@@ -174,19 +174,16 @@ header p {
   margin-bottom: 10px;
 }
 
-
 /* Footer */
 footer {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top:1em;
-  padding-bottom:1em;
   background-color: #003366; 
   color: white;
   width: 100%;
+  max-width: 100%;
   bottom: 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding:1em;
   
   .linktoschool a{
     color: white;
@@ -202,6 +199,30 @@ footer {
     height:auto;
   }
 
+}
+
+/* adjust to smaller screens */
+@media (max-width: 800px) {
+  footer {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+
+    .linktoschool a{
+      text-align: center;
+    }
+  }
+}
+
+/* adjust for larger screens */
+@media (min-width: 800px) {
+  /* Footer */
+  footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @keyframes fadeIn {
