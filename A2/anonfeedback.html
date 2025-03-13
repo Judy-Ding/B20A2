@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSCB20 - Tests</title>
-    <link rel="stylesheet" href="tests.css">
+    <title>CSCB20 - Feedback</title>
+    <link rel="stylesheet" href="anonfeedback.css">
 </head>
 <body>
     <nav>
@@ -56,45 +56,32 @@
       </nav>
 
     <header>
-        <h1>Tests</h1>
+        <h1>Feedback</h1>
         <p class="overview">
-            Here are the detailed information of the exams of this course.
+            Feel free to share any of your feedbacks of this course!
         </p>
     </header>
 
-    <main class="tests-container">
-        <div class="tests-grid">
-            <div class="tests-header">Date</div>
-            <div class="tests-header">Time</div>
-            <div class="tests-header">Room #</div>
-            <div class="tests-header">Detailed Information</div>
-
-            <div class="tests-item">Midterm Test</div>
-            <div class="tests-item">Feb 28 9:00-11:00</div>
-            <div class="tests-item">HL 170</div>
-            <div class="tests-detail-item">
-                <p> The test will cover course material from Weeks 1 to 5.</p>
-                <p> - <a href="lectures.html" target="_blank">Course Lecture material</a></p>
-                <p> - Concepts rehearsed in lecture with worksheets</p>
-                <p> - Weekly tutorials</p>
-                <p>- Assignment 1 </p>
-                <p>- More details can be found <a href="https://q.utoronto.ca/courses/372797/pages/term-test-info?module_item_id=6551420" target="_blank">here.</a></p>
-                
-            </div>
-
-            <div class="tests-item">Final Test</div>
-            <div class="tests-item">April 23 14:00-17:00</div>
-            <div class="tests-item">Not decided</div>
-            <div class="tests-detail-item">
-                <p>The test will everything we covered this whole semester.</p>
-                <p> - More details can be found <a href="https://q.utoronto.ca/courses/372797/pages/term-test-info?module_item_id=6551420" target="_blank">here.</a></p>    
-            </div>
+    <section class="feedback-container">
+        <div class="feedback-overview">
+            <p>Thank you for providing your feedback. Please note that all responses are anonymous, and the course team will carefully review each one. While we may not be able to address every issue or respond to each comment individually, rest assured that your feedback will be shared with the team working to improve the course.</p>
+            <p>If you have specific questions or need assistance, feel free to post on Piazza, visit Professor Purva during office hours, or reach out to one of the teaching assistants.</p>
         </div>
-    </main>
+
+        <div class="feedback-form-container">
+            <h2>Submit Your Feedback</h2>
+            <form action="submit_feedback.html" method="POST" class="feedback-form">
+                <label for="feedback-details">Your Feedback:</label><br>
+                <textarea id="feedback-details" name="feedback-details" placeholder="Enter your feedback here..."></textarea>
+                <button type="submit" class="submit button">Submit</button>
+            </form>
+        </div>
+    </section>
+
 
     <footer>
-        <p class="linktoschool"><a href="https://web.cs.toronto.edu/">Department of Computer Science, University of Toronto</a><br>Designed and built with care by Judy Ding, Hillary Tse, and Monica Vergara for CSCB20 &copy; 2025</p>
+        <p class="linktoschool"><a href="https://web.cs.toronto.edu/">  Department of Computer Science, University of Toronto</a><br>Designed and built with care by Judy Ding, Hillary Tse, and Monica Vergara for CSCB20 &copy; 2025</p>
         <p><img src="UTSC logo.png" alt=""></p>
-      </footer>
+    </footer>
 </body>
 </html>
