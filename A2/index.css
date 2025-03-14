@@ -127,26 +127,13 @@ header p {
   margin-bottom: 5px;
 }
 
-/* Professor Information */
-#professor-info {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-#professor-info h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
 .professor-details {
   display: flex;
-  align-items: center; 
+  align-items: flex-start; 
   justify-content: flex-start;
   gap: 20px; 
+  flex-wrap: wrap; /* Allows wrapping to prevent overflow */
+  max-width: 100%; /* Ensures it doesn't go beyond its parent */
 }
 
 .professor-photo {
@@ -165,7 +152,10 @@ header p {
 .professor-text {
   flex-grow: 1;
   border: 2px solid #003B49;
+  border-radius: 5px;
   padding: 20px;
+  box-sizing: border-box; /* Ensures padding/border doesn't cause overflow */
+  max-width: calc(100% - 170px); /* Prevents overflow by limiting width */
 }
 
 .professor-text p {
@@ -173,6 +163,20 @@ header p {
   line-height: 1.5;
   margin-bottom: 10px;
 }
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 800px) {
+  .professor-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .professor-text {
+    max-width: 100%; /* Full width on smaller screens */
+    text-align: center;
+  }
+}
+
 
 /* Footer */
 footer {
@@ -222,6 +226,84 @@ footer {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+/* Mobile Menu */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 800px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 0;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003366;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .dropdown-menu ul {
+    position: static;
+    display: none;
+  }
+
+  .dropdown-menu:hover ul {
+    display: block;
+  }
+
+    /* Dropdown menu items */
+  .dropdown-menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #012a53; /* Default background color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  /* Hover effect for dropdown menu items */
+  .dropdown-menu ul li a:hover {
+    background-color: #002244; /* Ensure hover color change */
+    border-radius: 5px;
   }
 }
 
