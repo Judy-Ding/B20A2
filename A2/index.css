@@ -45,14 +45,26 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-menu:hover > a,
+.dropdown-menu:focus-within > a {
+  background-color: #002244; /* Keep highlight */
+  border-radius: 5px;
+}
+
 .dropdown-menu ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #003366;
+  background-color: #003366; /* Default background color */
   list-style: none;
   display: none;
-  min-width: 150px;
+  min-width: 100%;
+  border-radius: 5px;
+  width: max-content;
 }
 
 .dropdown-menu ul li a {
@@ -242,7 +254,7 @@ footer {
 }
 
 /* Responsive Styles for Small Screens */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   nav {
     display: flex;
     flex-direction: column;
@@ -298,6 +310,7 @@ footer {
     color: white;
     background-color: #012a53; /* Default background color */
     transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 5px;
   }
 
   /* Hover effect for dropdown menu items */
