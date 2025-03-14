@@ -41,6 +41,6 @@
         grid-template-columns: 1fr; /* Switch to single-column layout */
     }
     .team-member {
-        max-width: 100%;
+        max-width: 98%;
     }
 }

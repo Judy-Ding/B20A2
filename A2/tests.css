@@ -1,5 +1,78 @@
 @import url(index.css);
 
+.tests-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px 0;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    width: 100%;
+}
+
+.tests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr; /* Default 4-column layout */
+    gap: 15px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+.tests-header {
+    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* General Item Styling */
+.tests-item, .tests-detail-item {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Details in the left */
+.tests-detail-item {
+    text-align: left;
+}
+
+/* 🌍 Responsive: Convert to stacked format */
+@media (max-width: 800px) {
+    .tests-grid {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .tests-header {
+        display: none; /* Hide headers for small screens */
+    }
+
+    .tests-item, .tests-detail-item {
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .test { 
+        font-weight: bold; 
+        background-color: #003366;
+        color: white;
+        border-radius: 5px;
+        padding:1em;
+    }
+}
+
+/*
 .tests-container{
     display: flex;
     justify-content: center;
@@ -43,7 +116,7 @@
     border-radius: 5px;
     text-align:left;
 }
-
+*/
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -51,4 +124,4 @@
     to {
       opacity: 1;
     }
-  }
+  } 

@@ -72,4 +72,26 @@
     to {
       opacity: 1;
     }
+}
+
+@media (max-width: 600px) {
+    .assignment-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .assignment-name {
+        background-color: #003366;
+        color: white;
+        border-radius: 5px;
+        padding: 1em;
+    }
+  
+    .assignment-item {
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .assignment-header{
+        display: none;
+    }
   }
