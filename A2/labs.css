@@ -1,10 +1,8 @@
 @import url(index.css);
 
-
-/* Make sure the grid stays responsive */
 .labs-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr; /* Adjust for better mobile fit */
+    grid-template-columns: 1fr 2fr 3fr; 
     gap: 10px;
     width: 90%;
     max-width: 900px;
@@ -15,7 +13,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Ensure headers stay visible */
 .labs-header {
     font-weight: bold;
     background-color: #003366;
@@ -23,41 +20,37 @@
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    word-wrap: break-word; /* Allow text wrapping */
+    word-wrap: break-word; 
 }
 
-/* Make lab items flexible */
 .labs-item {
     padding: 10px;
     background-color: #f4f4f4;
     border-radius: 5px;
     margin: 5px;
-    word-wrap: break-word; /* Ensures long links wrap */
+    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 800px) {
     .labs-grid {
-        grid-template-columns: 1fr 2fr 2fr; /* Keep 3 columns but adjust for space */
-        font-size: 14px; /* Reduce text size slightly */
+        grid-template-columns: 1fr 2fr 2fr; 
+        font-size: 14px; 
     }
 
     .labs-header, .labs-item {
-        padding: 8px; /* Reduce padding for better fit */
+        padding: 8px; 
     }
 
     .labs-item a {
-        display: block; /* Ensure links wrap properly */
+        display: block; 
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
 }
 
 .labs-overview {
-    font-size: 20px;
     border-radius: 10px;
-    text-align: center;
     margin: 40px auto; 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -67,7 +60,6 @@
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out forwards;
 }
-
 
 .labs-container{
     display: flex;
@@ -105,7 +97,6 @@
     background-color: #f4f4f4;
     margin: 10px;
 }
-
 
 @keyframes fadeIn {
     from {
